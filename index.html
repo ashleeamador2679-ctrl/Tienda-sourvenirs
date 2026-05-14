@@ -10,377 +10,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    :root{
-      --green:#435a3d;
-      --light:#f7f1e7;
-      --beige:#efe4d1;
-      --brown:#7a5c43;
-      --text:#2d2d2d;
-      --white:#ffffff;
-    }
-
-    body{
-      font-family:'Poppins', sans-serif;
-      background:var(--light);
-      color:var(--text);
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      width:100%;
-      display:block;
-    }
-
-    /* NAVBAR */
-
-    header{
-      width:100%;
-      position:absolute;
-      top:0;
-      left:0;
-      z-index:10;
-      padding:25px 8%;
-    }
-
-    nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-
-    .logo{
-      font-size:2rem;
-      font-family:'Cormorant Garamond', serif;
-      color:white;
-      font-weight:600;
-      letter-spacing:1px;
-    }
-    
-    .menu{
-      display:flex;
-      gap:35px;
-      color:white;
-      font-weight:300;
-    }
-
-    .menu a:hover{
-      opacity:.7;
-    }
-
-    /* HERO */
-
-    .hero{
-      height:100vh;
-      background:
-      linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), 
-      url('imagenes/exterior.png');
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      align-items:center;
-      padding:0 8%;
-      position:relative;
-    }
-
-    .hero-content{
-      max-width:650px;
-      color:white;
-    }
-
-    .hero-sub{
-      font-size:1.1rem;
-      margin-bottom:15px;
-      letter-spacing:2px;
-      text-transform:uppercase;
-    }
-
-    .hero h1{
-      font-family:'Cormorant Garamond', serif;
-      font-size:5rem;
-      line-height:1;
-      margin-bottom:25px;
-      font-weight:500;
-    }
-
-    .hero p{
-      font-size:1.1rem;
-      line-height:1.8;
-      margin-bottom:35px;
-      max-width:550px;
-    }
-
-    .btn{
-      display:inline-block;
-      background:var(--green);
-      color:white;
-      padding:16px 38px;
-      border-radius:50px;
-      transition:.3s;
-      font-weight:500;
-    }
-
-    .btn:hover{
-      background:#31452d;
-      transform:translateY(-2px);
-    }
-
-    /* FEATURES */
-
-    .features{
-      padding:80px 8%;
-      background:var(--light);
-    }
-
-    .features-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:40px;
-      text-align:center;
-    }
-
-    .feature{
-      padding:25px;
-    }
-
-    .feature h3{
-      margin:18px 0 10px;
-      font-weight:500;
-    }
-
-    .feature p{
-      font-size:.95rem;
-      color:#666;
-      line-height:1.7;
-    }
-
-    .icon{
-      font-size:2rem;
-    }
-
-    /* CATEGORIES */
-
-    .categories{
-      padding:50px 8% 100px;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:55px;
-    }
-
-    .section-title span{
-      color:var(--brown);
-      text-transform:uppercase;
-      letter-spacing:2px;
-      font-size:.9rem;
-    }
-
-    .section-title h2{
-      font-family:'Cormorant Garamond', serif;
-      font-size:4rem;
-      color:var(--green);
-      margin-top:10px;
-      font-weight:500;
-    }
-
-    .category-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:25px;
-    }
-
-    .card{
-      border-radius:25px;
-      overflow:hidden;
-      position:relative;
-      height:360px;
-      cursor:pointer;
-    }
-
-    .card img{
-      height:100%;
-      object-fit:cover;
-      transition:.5s;
-    }
-
-    .card:hover img{
-      transform:scale(1.08);
-    }
-
-    .overlay{
-      position:absolute;
-      inset:0;
-      background:linear-gradient(transparent, rgba(0,0,0,.7));
-      display:flex;
-      align-items:flex-end;
-      padding:30px;
-    }
-
-    .overlay h3{
-      color:white;
-      font-size:1.7rem;
-      font-family:'Cormorant Garamond', serif;
-      font-weight:500;
-    }
-
-    /* ABOUT */
-
-    .about{
-      background:var(--beige);
-      padding:100px 8%;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:60px;
-      align-items:center;
-    }
-
-    .about img{
-      border-radius:30px;
-      height:500px;
-      object-fit:cover;
-    }
-
-    .about-text h2{
-      font-family:'Cormorant Garamond', serif;
-      font-size:4rem;
-      color:var(--green);
-      margin-bottom:20px;
-      line-height:1;
-    }
-
-    .about-text p{
-      line-height:1.9;
-      color:#555;
-      margin-bottom:30px;
-    }
-
-    /* NEWSLETTER */
-
-    .newsletter{
-      padding:100px 8%;
-      background:
-      linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-      url("imagenes/unete.png");
-      background-size:cover;
-      background-position:center;
-      text-align:center;
-      color:white;
-    }
-
-    .newsletter h2{
-      font-size:4rem;
-      font-family:'Cormorant Garamond', serif;
-      margin-bottom:20px;
-      font-weight:500;
-    }
-
-    .newsletter p{
-      max-width:650px;
-      margin:auto;
-      line-height:1.8;
-      margin-bottom:35px;
-    }
-
-    .newsletter form{
-      display:flex;
-      justify-content:center;
-      gap:15px;
-      flex-wrap:wrap;
-    }
-
-    .newsletter input{
-      padding:16px 20px;
-      width:320px;
-      border:none;
-      border-radius:50px;
-      outline:none;
-    }
-
-    /* FOOTER */
-
-    footer{
-      background:#243020;
-      color:white;
-      padding:70px 8% 30px;
-    }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:2fr 1fr 1fr;
-      gap:40px;
-      margin-bottom:50px;
-    }
-
-    footer h3{
-      margin-bottom:20px;
-      font-weight:500;
-    }
-
-    footer p,
-    footer a{
-      color:#d4d4d4;
-      line-height:2;
-      font-size:.95rem;
-    }
-
-    .copy{
-      border-top:1px solid rgba(255,255,255,.1);
-      padding-top:25px;
-      text-align:center;
-      color:#c8c8c8;
-      font-size:.9rem;
-    }
-
-    /* RESPONSIVE */
-
-    @media(max-width:900px){
-
-      .hero{
-      background:
-      linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-      url('imagenes/exterior-tienda.png');
-
-      background-size:cover;
-      background-position:center;
-      }
-
-      .hero h1{
-        font-size:3.5rem;
-      }
-
-      .about{
-        grid-template-columns:1fr;
-      }
-
-      .footer-grid{
-        grid-template-columns:1fr;
-      }
-
-      .menu{
-        display:none;
-      }
-
-    }
-
-  </style>
 </head>
+  
 <body>
 
   <!-- HEADER -->
-
   <header>
     <nav>
       <div class="logo">Rincon artesanal</div>
@@ -398,36 +32,28 @@
   </header>
 
   <!-- HERO -->
-
   <section class="hero">
-
     <div class="hero-content">
-
-      <div class="hero-sub">
+    <div class="hero-sub">
         recuerdos de costa rica
-      </div>
-
+    </div>
       <h1>
         Llévate un pedacito de Uvita
       </h1>
-
+      
       <p>
         Souvenirs artesanales inspirados en la naturaleza, 
         las playas y la esencia tropical de Costa Rica.
       </p>
 
       <a href="#" class="btn">Explorar tienda</a>
-
     </div>
-
   </section>
 
   <!-- FEATURES -->
 
   <section class="features">
-
     <div class="features-grid">
-
       <div class="feature">
         <div class="icon">🌿</div>
         <h3>Hecho en Costa Rica</h3>
@@ -459,22 +85,18 @@
           Envíos a todo Costa Rica y pedidos internacionales.
         </p>
       </div>
-
     </div>
-
   </section>
 
   <!-- CATEGORIES -->
 
   <section class="categories">
-
     <div class="section-title">
       <span>explora</span>
       <h2>Categorías</h2>
     </div>
 
     <div class="category-grid">
-
       <div class="card">
         <img src= "imagenes/accesorios.png">
         <div class="overlay">
@@ -495,52 +117,36 @@
           <h3>Artesanías</h3>
         </div>
       </div>
-
     </div>
-
   </section>
 
   <!-- ABOUT -->
 
   <section class="about">
-
     <img src="imagenes/about-section.png">
-
     <div class="about-text">
-
       <h2>
         Pura vida,<br>
         buenos recuerdos
       </h2>
-
+      
       <p>
         Nuestra tienda busca transmitir la esencia de Costa Rica 
         a través de productos auténticos, elegantes y llenos de vida.
         Inspirados por la naturaleza de Uvita, el océano y la cultura local.
       </p>
-
       <a href="#" class="btn">Conócenos</a>
-
     </div>
-
   </section>
 
   <!-- NEWSLETTER -->
-
   <section class="newsletter">
-
     <h2>Únete a nuestra comunidad</h2>
-
     <p>
       Recibe novedades, promociones y nuevos productos inspirados
       en Costa Rica.
     </p>
-
-    <form>
-      <input type="email" placeholder="Tu correo electrónico">
-      <button class="btn">Suscribirme</button>
-    </form>
-
+    <a href="https://wa.me/50660193698" class="btn-reserva">Contactanos</a>
   </section>
 
   <!-- FOOTER -->
