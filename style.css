@@ -75,14 +75,56 @@
       align-items:center;
     }
 
-    .logo{
+   /* =========================
+   LOGO NAVBAR
+========================= */
+
+   .logo{
+   
+     display:flex;
+     align-items:center;
+     gap:14px;
+   
+   }
+   
+   /* TEXTO */
+   
+   .logo-text{
+     display:flex;
+     flex-direction:column;
+   }
+   
+   /* TITULO */
+   
+   .logo-text h2{
+      color:white;
       font-size:2rem;
       font-family:'Cormorant Garamond', serif;
-      color:white;
       font-weight:600;
       letter-spacing:1px;
-    }
-    
+      line-height:1;
+   }
+   
+   /* SUBTITULO */
+   
+   .logo-text span{
+      color:rgba(255,255,255,.75);
+      font-size:.72rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-top:4px;
+   }
+   
+   /* LOGO */
+   
+   .logo img{
+      width:52px;
+      height:52px;
+      object-fit:contain;
+      border-radius:50%;
+      opacity:.95;
+   }
+       
     .menu{
       display:flex;
       gap:35px;
@@ -93,84 +135,6 @@
     .menu a:hover{
       opacity:.7;
     }
-
-    /* HERO */
-
-   /* =========================
-   HERO BRAND
-========================= */
-
-.hero-brand{
-
-  display:flex;
-  align-items:center;
-  gap:22px;
-
-  animation:fadeInUp 1.2s ease;
-
-}
-
-/* TEXTO */
-
-.brand-text{
-  display:flex;
-  flex-direction:column;
-}
-
-/* TITULO */
-
-.brand-text h1{
-
-  color:white;
-
-  font-size:5rem;
-
-  line-height:1;
-
-  font-family:'Cormorant Garamond', serif;
-
-  font-weight:500;
-
-  letter-spacing:1px;
-
-  margin-bottom:8px;
-
-  text-shadow:
-  0 5px 20px rgba(0,0,0,.35);
-
-}
-
-/* SUBTITULO */
-
-.brand-text span{
-
-  color:rgba(255,255,255,.85);
-
-  font-size:1rem;
-
-  letter-spacing:3px;
-
-  text-transform:uppercase;
-
-  font-weight:300;
-
-}
-
-/* LOGO */
-
-.hero-brand img{
-
-  width:95px;
-  height:95px;
-
-  object-fit:contain;
-
-  border-radius:50%;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,.25);
-
-}
 
 /* =========================
    ANIMACION
@@ -635,37 +599,7 @@
     /* RESPONSIVE */
 
     @media(max-width:900px){
-      .hero-brand{
-
-    justify-content:center;
-
-    text-align:center;
-
-    width:100%;
-
-    gap:15px;
-  }
-
-  .brand-text h1{
-
-    font-size:3.2rem;
-
-  }
-
-  .brand-text span{
-
-    font-size:.8rem;
-
-    letter-spacing:2px;
-
-  }
-
-  .hero-brand img{
-
-    width:65px;
-    height:65px;
-
-  }
+     
        .catalog-content{
        padding:35px 20px;
      }
