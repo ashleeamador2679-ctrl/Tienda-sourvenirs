@@ -89,38 +89,207 @@
     </div>
   </section>
 
-  <!-- CATEGORIES -->
+  <!-- =========================
+     CATEGORÍAS
+========================= -->
 
-  <section class="categories">
-    <div class="section-title">
-      <span>explora</span>
-      <h2>Categorías</h2>
-    </div>
+<section class="categories">
+  <div class="section-title">
+    <span>explora</span>
+    <h2>Categorías</h2>
+  </div>
+  <div class="category-grid">
 
-    <div class="category-grid">
-      <div class="card">
-        <img src= "imagenes/accesorios.png">
-        <div class="overlay">
-          <h3>Accesorios</h3>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="imagenes/decoraciones.png">
-        <div class="overlay">
-          <h3>Decoración</h3>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="imagenes/artesania.png">
-          <div class="overlay">
-          <h3>Artesanías</h3>
-        </div>
+    <!-- ACCESORIOS -->
+    <div class="card" onclick="openCatalog('accesorios')">
+      <img src="imagenes/accesorios.png">
+      <div class="overlay">
+        <h3>Accesorios</h3>
       </div>
     </div>
-  </section>
 
+    <!-- DECORACION -->
+
+    <div class="card" onclick="openCatalog('decoracion')">
+      <img src="imagenes/decoraciones.png">
+      <div class="overlay">
+        <h3>Decoración</h3>
+      </div>
+    </div>
+
+    <!-- ARTESANIAS -->
+
+    <div class="card" onclick="openCatalog('artesanias')">
+      <img src="imagenes/artesania.png">
+      <div class="overlay">
+        <h3>Artesanías</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     MODAL / CATALOGO
+========================= -->
+
+<div class="catalog-modal" id="catalogModal">
+  <div class="catalog-content">
+
+    <!-- BOTON CERRAR -->
+    <span class="close-btn" onclick="closeCatalog()">
+      ✕
+    </span>
+
+    <!-- TITULO -->
+    <h2 id="catalogTitle">
+      Catálogo
+    </h2>
+
+    <!-- PRODUCTOS -->
+    <div class="products-grid" id="productsGrid">
+      
+    </div>
+  </div>
+</div>
+
+  <script>
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+const catalogs = {
+
+  accesorios: [
+
+    {
+      name: "Collar Tropical",
+      image: "imagenes/producto1.jpg",
+      desc: "Collar artesanal inspirado en el océano.",
+      price: "₡8.000"
+    },
+
+    {
+      name: "Pulsera Pura Vida",
+      image: "imagenes/producto2.jpg",
+      desc: "Pulsera hecha a mano con materiales naturales.",
+      price: "₡5.500"
+    },
+
+    {
+      name: "Aretes de Concha",
+      image: "imagenes/producto3.jpg",
+      desc: "Diseño tropical elegante y ligero.",
+      price: "₡7.000"
+    }
+
+  ],
+
+  decoracion: [
+
+    {
+      name: "Cuadro Artesanal",
+      image: "imagenes/deco1.jpg",
+      desc: "Decoración rústica de madera reciclada.",
+      price: "₡15.000"
+    },
+
+    {
+      name: "Lámpara Tropical",
+      image: "imagenes/deco2.jpg",
+      desc: "Lámpara artesanal estilo boho tropical.",
+      price: "₡22.000"
+    }
+
+  ],
+
+  artesanias: [
+
+    {
+      name: "Tortuga Tallada",
+      image: "imagenes/art1.jpg",
+      desc: "Figura hecha a mano por artesanos locales.",
+      price: "₡12.000"
+    },
+
+    {
+      name: "Ballena de Madera",
+      image: "imagenes/art2.jpg",
+      desc: "Inspirada en el Parque Marino Ballena.",
+      price: "₡18.000"
+    }
+
+  ]
+
+};
+
+/* =========================
+   ABRIR CATALOGO
+========================= */
+
+function openCatalog(category){
+
+  const modal =
+  document.getElementById("catalogModal");
+
+  const title =
+  document.getElementById("catalogTitle");
+
+  const grid =
+  document.getElementById("productsGrid");
+
+  grid.innerHTML = "";
+
+  title.innerText =
+  category.charAt(0).toUpperCase()
+  + category.slice(1);
+
+  catalogs[category].forEach(product => {
+
+    grid.innerHTML += `
+
+      <div class="product-card">
+
+        <img src="${product.image}">
+
+        <div class="product-info">
+
+          <h3>${product.name}</h3>
+
+          <p>${product.desc}</p>
+          
+          <div class="price">
+            ${product.price}
+          </div>
+          </div>
+      </div>
+       `;
+  });
+  modal.classList.add("active");
+}
+
+/* =========================
+   CERRAR
+========================= */
+
+function closeCatalog(){
+  document
+  .getElementById("catalogModal")
+  .classList.remove("active");
+}
+
+/* =========================
+   CERRAR CLICK AFUERA
+========================= */
+window.onclick = function(e){
+  const modal =
+  document.getElementById("catalogModal");
+  if(e.target === modal){
+    modal.classList.remove("active");
+  }
+}
+</script>
+  
   <!-- ABOUT -->
 
   <section class="about">
