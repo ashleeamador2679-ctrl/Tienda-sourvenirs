@@ -4,6 +4,10 @@
       box-sizing:border-box;
     }
 
+   html{
+      scroll-behavior:smooth;
+   }
+   
     :root{
       --green:#435a3d;
       --light:#f7f1e7;
