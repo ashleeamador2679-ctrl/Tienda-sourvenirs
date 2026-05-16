@@ -599,6 +599,20 @@
     /* RESPONSIVE */
 
     @media(max-width:900px){
+
+       .logo-text h2{
+        font-size:1.5rem;
+      }
+
+      .logo-text span{
+        font-size:.58rem;
+        letter-spacing:1.5px;
+      }
+
+      .logo img{
+        width:42px;
+        height:42px;
+      }
      
        .catalog-content{
        padding:35px 20px;
