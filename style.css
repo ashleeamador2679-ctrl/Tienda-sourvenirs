@@ -330,12 +330,11 @@
    .map-overlay{
      position:absolute;
      inset:0;
-   
-     background:
+      background:
      linear-gradient(
-       rgba(0,0,0,.10),
-       rgba(0,0,0,.20)
-     );
+      rgba(0,0,0,.10),
+      rgba(0,0,0,.20)
+     )
    
      z-index:2;
      pointer-events:none;
