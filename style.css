@@ -219,9 +219,33 @@
 }
     /* FEATURES */
 
+      .feature{
+      background:rgba(255,255,255,.45);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,.3);
+      border-radius:25px;
+      transition:.4s;
+      animation: fadeUp 1s ease;
+      }
+
+      .feature:hover{
+         transform:translateY(-8px);
+         box-shadow:
+            0 20px 40px rgba(0,0,0,.08);
+      }
+
     .features{
       padding:80px 8%;
       background:var(--light);
+      background:
+        linear-gradient(
+            rgba(247,241,231,.96)
+           rgba(247,241,231,.96)
+           );
+           url('imagenes/texture.jpg');
+       background-size:cover;
+
+}
     }
 
     .features-grid{
@@ -267,6 +291,16 @@
       letter-spacing:2px;
       font-size:.9rem;
     }
+
+   .section-title h2::after{
+      content:"";
+      display:block;
+      width:90px;
+      height:2px;
+      background:var(--brown);
+      margin:18px auto 0;
+      border-radius:10px;
+   }
 
     .section-title h2{
       font-family:'Cormorant Garamond', serif;
