@@ -64,7 +64,7 @@
       top:0;
       left:0;
       z-index:1000;
-      padding:18px 8%;
+      padding:15px 8%;
       backdrop-filter:blur(10px);
       background:rgba(0,0,0,.15);
     }
