@@ -195,6 +195,22 @@
       max-width:550px;
     }
 
+   /* DIVISION WAVE*/
+      .wave-divider{
+        position:relative;
+        margin-top:-2px;
+        line-height:0;
+      }
+      
+      .wave-divider svg{
+        display:block;
+        width:100%;
+        height:90px;
+      }
+      
+      .wave-divider path{
+        fill:#f7f1e7;
+      }
     /* FEATURES */
 
     .features{
