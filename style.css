@@ -224,8 +224,14 @@
       backdrop-filter:blur(10px);
       border:1px solid rgba(255,255,255,.3);
       border-radius:25px;
-      transition:.4s;
       animation: fadeUp 1s ease;
+      padding:25px;
+      min-height:240px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      transition:.4s ease;
+      border:1px solid rgba(0,0,0,.04);
       }
 
       .feature:hover{
@@ -244,19 +250,14 @@
            );
            url('imagenes/texture.png');
        background-size:cover;
-
-}
     }
+}
 
     .features-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:40px;
-      text-align:center;
-    }
-
-    .feature{
-      padding:25px;
+       display:grid;
+       grid-template-columns:
+          repeat(4,1fr);
+       gap:30px;
     }
 
     .feature h3{
@@ -654,6 +655,10 @@
         width:55px;
         height:55px;
       }
+
+       .features-grid{
+          grid-template-columns:1fr;
+       }
      
        .catalog-content{
        padding:35px 20px;
