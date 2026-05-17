@@ -220,6 +220,26 @@
    /* =========================
    FEATURES PREMIUM
 ========================= */
+
+.leaf{
+   position:absolute;
+   width:180px;
+   opacity:.06;
+   pointer-events:none;
+}
+
+.leaf-1{
+   top:20px;
+   left:-50px;
+   transform:rotate(-15deg);
+}
+
+.leaf-2{
+   bottom:-20px;
+   right:-50px;
+   transform:rotate(20deg);
+}
+
 .features{
    padding:70px 8%;
    background:
