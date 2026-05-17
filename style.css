@@ -195,21 +195,6 @@
       max-width:550px;
     }
 
-    .btn{
-      display:inline-block;
-      background:var(--green);
-      color:white;
-      padding:16px 38px;
-      border-radius:50px;
-      transition:.3s;
-      font-weight:500;
-    }
-
-    .btn:hover{
-      background:#31452d;
-      transform:translateY(-2px);
-    }
-
     /* FEATURES */
 
     .features{
