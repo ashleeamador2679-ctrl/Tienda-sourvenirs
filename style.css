@@ -228,13 +228,13 @@
    pointer-events:none;
 }
 
-.leaf-1{
+.leaf-2{
    top:20px;
    left:-50px;
    transform:rotate(-15deg);
 }
 
-.leaf-2{
+.leaf-1{
    bottom:-20px;
    right:-50px;
    transform:rotate(20deg);
