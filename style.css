@@ -682,12 +682,9 @@
       padding:70px 8% 30px;
       position:relative;
       overflow:hidden;
-      background:
-         linear-gradient(135deg,
-           #435a3d 0%,
-            #243020 35%,
-           #182015 70%,
-           #0c110a 100%
+       background:
+        linear-gradient(
+        160deg, #89a97a 0%, #556f4f 20%, #243020 55%, #0b0f09 100%
         );
    }
       
