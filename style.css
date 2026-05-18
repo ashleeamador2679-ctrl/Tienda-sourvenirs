@@ -853,6 +853,21 @@
 
     @media(max-width:900px){
 
+       .slider-track img{
+          width:220px;
+          height:170px;
+          border-radius:20px;
+       }
+       .slider-track{
+          gap:15px;
+          animation:scrollSlider 20s linear infinite;
+       }
+
+       .infinite-slider::before,
+      .infinite-slider::after{
+         width:50px;
+      }
+
        .logo-text h2{
         font-size:1.5rem;
       }
