@@ -854,12 +854,12 @@
     @media(max-width:900px){
 
        .slider-track img{
-          width:220px;
-          height:170px;
-          border-radius:20px;
+          width:140px;
+          height:110px;
+          border-radius:16px;
        }
        .slider-track{
-          gap:15px;
+          gap:12px;
           animation:scrollSlider 20s linear infinite;
        }
 
