@@ -855,8 +855,8 @@
 
        .slider-track img{
           width:140px;
-          height:110px;
-          border-radius:16px;
+          height:130px;
+          border-radius:18px;
        }
        .slider-track{
           gap:12px;
