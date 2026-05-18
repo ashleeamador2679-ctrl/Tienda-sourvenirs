@@ -588,6 +588,94 @@
   transform:translateY(-2px);
 }
 
+
+/* =========================
+   INFINITE SLIDER
+========================= */
+
+.infinite-slider{
+   width:100%;
+   overflow:hidden;
+   padding:80px 0;
+   background:
+  linear-gradient(
+  to bottom,
+  #f7f1e7,
+  #efe4d1
+  );
+}
+
+/* TRACK */
+.slider-track{
+   display:flex;
+   gap:25px;
+   width:max-content;
+   animation:
+      scrollSlider 35s linear infinite;
+}
+
+/* IMAGENES */
+.slider-track img{
+   width:420px;
+   height:300px;
+   object-fit:cover;
+   border-radius:30px;
+   box-shadow:
+      0 15px 35px rgba(0,0,0,.12);
+   transition:.4s;
+}
+
+/* HOVER */
+.slider-track img:hover{
+   transform:
+   scale(1.04);
+}
+
+/* ANIMACION */
+@keyframes scrollSlider{
+   from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+/*EFECTO FADE DEL CARRUSELL*/
+.infinite-slider{
+   position:relative;
+}
+.infinite-slider::before,
+.infinite-slider::after{
+   content:"";
+   position:absolute;
+   top:0;
+   width:150px;
+   height:100%;
+   z-index:2;
+}
+
+.infinite-slider::before{
+   left:0;
+   background:
+  linear-gradient(
+  to right,
+  #f7f1e7,
+  transparent
+  );
+}
+
+.infinite-slider::after{
+   right:0;
+   background:
+  linear-gradient(
+  to left,
+  #f7f1e7,
+  transparent
+  );
+}
+
     /* =========================
    MAPA PREMIUM
 ========================= */
