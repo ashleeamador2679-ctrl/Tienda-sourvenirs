@@ -571,6 +571,23 @@
       margin-bottom:30px;
     }
 
+   .btn{
+  display:inline-block;
+  background:var(--green);
+  color:white;
+  padding:16px 38px;
+  border-radius:50px;
+  transition:.3s;
+  font-weight:500;
+  border:none;
+  cursor:pointer;
+}
+
+.btn:hover{
+  background:#31452d;
+  transform:translateY(-2px);
+}
+
     /* =========================
    MAPA PREMIUM
 ========================= */
