@@ -687,6 +687,65 @@
      #f7f1e7,
      #efe4d1);
    }
+
+   /* =========================
+   MAP LAYOUT
+========================= */
+
+.map-layout{
+   display:grid;
+   grid-template-columns: 420px 1fr;
+   gap:40px;
+   align-items:stretch;
+}
+
+/* TARJETA INFO */
+
+.location-card{
+   background:rgba(255,255,255,.65);
+   backdrop-filter:blur(12px);
+   border-radius:35px;
+   padding:40px;
+   box-shadow:
+   0 20px 50px rgba(0,0,0,.08);
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+}
+
+.location-card h3{
+   font-size:2.5rem;
+   color:var(--green);
+   margin-bottom:20px;
+   font-family:'Cormorant Garamond', serif;
+   font-weight:600;
+}
+
+.location-card p{
+   color:#666;
+   line-height:1.9;
+   margin-bottom:30px;
+}
+
+/* ITEMS */
+
+.info-item{
+   display:flex;
+   align-items:flex-start;
+   gap:15px;
+
+   margin-bottom:22px;
+
+   font-size:1rem;
+   color:#444;
+}
+
+.info-item i{
+   color:var(--brown);
+   font-size:1.2rem;
+   margin-top:4px;
+}
+
    
    /* INFO */
    
@@ -853,6 +912,17 @@
 
     @media(max-width:900px){
 
+       .map-layout{
+      grid-template-columns:1fr;
+      }
+
+      .location-card{
+      padding:30px;
+      }
+
+      .location-card h3{
+      font-size:2rem;
+      }
        .slider-track img{
           width:160px;
           height:120px;
