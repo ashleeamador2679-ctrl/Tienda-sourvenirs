@@ -770,6 +770,29 @@
      margin-bottom:30px;
      font-size:1rem;
    }
+
+/*HORARIOS DE ATENCION*/
+
+      .schedule{
+      width:100%;
+   }
+   
+   .schedule div{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      padding:6px 0;
+      font-size:.95rem;
+   }
+   
+   .schedule span{
+      color:#666;
+   }
+   
+   .schedule strong{
+      color:var(--green);
+      font-weight:600;
+   }
    
    /* WRAPPER */
    
