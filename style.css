@@ -932,10 +932,12 @@
 }
 
 .section-title span{
-   color:var(--brown);
+   color:#b6926d;
    text-transform:uppercase;
-   letter-spacing:2px;
-   font-size:.9rem;
+   letter-spacing:4px;
+   font-size:.82rem;
+   font-weight:500;
+   display:inline-block;
 }
 
 .section-title h2{
@@ -951,9 +953,9 @@
    display:block;
    width:90px;
    height:2px;
-   background:var(--brown);
+   background:#c5a27b;
    margin:18px auto 0;
-   border-radius:10px;
+   border-radius:20px;
 }
     /* =========================
    MAPA PREMIUM
