@@ -404,217 +404,223 @@
 }
 
 
-    /* =========================
+   /* =========================
    CATEGORIES PREMIUM
 ========================= */
 
 .categories{
+   position:relative;
    padding:140px 8%;
    background:
-   linear-gradient(
-   to bottom,
-   #f7f1e7,
-   #efe4d1
-   );
-   position:relative;
+   linear-gradient(to bottom,#f7f1e7,#efe4d1);
    overflow:hidden;
 }
 
-/* TITULO */
+/* =========================
+   HOJAS DECORATIVAS
+========================= */
 
-.section-title{
-   text-align:center;
-   margin-bottom:80px;
+.leaf-bg{
+   position:absolute;
+   opacity:.08;
+   pointer-events:none;
+   z-index:1;
 }
 
-.section-title span{
-   color:#9b7b58;
+.leaf-left{
+   width:280px;
+   top:60px;
+   left:-60px;
+   transform:rotate(-12deg);
+}
+
+.leaf-right{
+   width:260px;
+   bottom:40px;
+   right:-50px;
+   transform:rotate(18deg);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.categories-header{
+   position:relative;
+   z-index:2;
+   text-align:center;
+   margin-bottom:90px;
+}
+
+/* MINI TITULO */
+
+.mini-title{
+   color:#b6926d;
    text-transform:uppercase;
    letter-spacing:4px;
-   font-size:.85rem;
+   font-size:.82rem;
+   font-weight:500;
 }
 
-.section-title h2{
-   font-family:'Cormorant Garamond', serif;
-   font-size:5.5rem;
-   color:#435a3d;
-   margin-top:15px;
-   font-weight:600;
-   line-height:1;
-}
+/* LINEA DORADA */
 
-/* GRID */
-
-.category-grid{
-   display:grid;
-   grid-template-columns:
-   repeat(3,1fr);
-
-   gap:35px;
-}
-
-/* CARD */
-
-.card{
-   position:relative;
-   height:620px;
-   border-radius:38px;
-   overflow:hidden;
-   cursor:pointer;
-   isolation:isolate;
-   transition:.7s ease;
-   box-shadow: 0 25px 60px rgba(0,0,0,.10);
-   background:#000;
-}
-
-/* IMAGEN */
-
-.card img{
-   width:100%;
-   height:100%;
-   object-fit:cover;
-   transition:1.2s ease;
-}
-
-/* OVERLAY */
-
-.overlay{
-   position:absolute;
-   inset:0;
-   padding:45px;
-   display:flex;
-   flex-direction:column;
-   justify-content:flex-end;
-   background:
-   linear-gradient(
-   to top,
-   rgba(0,0,0,.78) 0%,
-   rgba(0,0,0,.30) 45%,
-   rgba(0,0,0,.08) 100%
-   );
-   transition:.6s ease;
-}
-
-/* LINEA PREMIUM */
-
-.overlay::before{
-   content:"";
-   position:absolute;
-   top:35px;
-   left:35px;
-   width:70px;
+.gold-line{
+   width:90px;
    height:2px;
-   background:
-   rgba(255,255,255,.75);
+   background:#c5a27b;
+   margin:18px auto 28px;
    border-radius:20px;
 }
 
 /* TITULO */
 
-.overlay h3{
-   color:white;
-   font-size:3rem;
+.categories-header h2{
    font-family:'Cormorant Garamond', serif;
+   font-size:5.5rem;
+   color:#435a3d;
    font-weight:600;
-   margin-bottom:18px;
    line-height:1;
-   transform:translateY(40px);
-   opacity:0;
-   transition:.7s ease;
+   margin-bottom:28px;
 }
 
 /* TEXTO */
 
-.overlay p{
-   color:rgba(255,255,255,.85);
-   line-height:1.9;
+.categories-header p{
+   max-width:720px;
+   margin:auto;
+   color:#666;
+   line-height:2;
    font-size:1rem;
-   max-width:320px;
-   margin-bottom:28px;
-   transform:translateY(40px);
-   opacity:0;
-   transition:.9s ease;
 }
 
-/* BOTON */
+/* =========================
+   GRID
+========================= */
 
-.category-btn{
-   width:max-content;
-   padding:15px 30px;
-   border-radius:50px;
+.category-grid{
+   position:relative;
+   z-index:2;
+   display:grid;
+   grid-template-columns:
+   repeat(3,1fr);
+   gap:35px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.category-card{
+   position:relative;
+   height:470px;
+   border-radius:38px;
+   overflow:hidden;
+   cursor:pointer;
+   box-shadow:
+   0 25px 60px rgba(0,0,0,.10);
+   transition:.5s ease;
+   background:#000;
+}
+
+/* IMAGEN */
+
+.category-card img{
+   width:100%;
+   height:100%;
+   object-fit:cover;
+   transition:1s ease;
+}
+
+/* OVERLAY */
+
+.category-overlay{
+   position:absolute;
+   inset:0;
+   display:flex;
+   flex-direction:column;
+   justify-content:flex-end;
+   align-items:center;
+   text-align:center;
+   padding:45px;
    background:
-   rgba(255,255,255,.12);
-   backdrop-filter:blur(12px);
-   border:
-   1px solid rgba(255,255,255,.18);
-   color:white;
-   font-size:.82rem;
-   text-transform:uppercase;
-   letter-spacing:2px;
-   transition:.4s ease;
-   transform:translateY(40px);
-   opacity:0;
+   linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.25) 45%,rgba(0,0,0,.08) 100%);
 }
 
-.category-btn:hover{
-   background:white;
-   color:#435a3d;
+/* NUMERO */
+
+.card-number{
+   position:absolute;
+   top:35px;
+   left:35px;
+   color:rgba(255,255,255,.75);
+   font-size:.9rem;
+   letter-spacing:3px;
+}
+
+/* TITULO */
+
+.category-overlay h3{
+   font-family:'Cormorant Garamond', serif;
+   font-size:3rem;
+   color:white;
+   font-weight:600;
+   margin-bottom:18px;
+}
+
+/* LINEA */
+
+.card-line{
+   width:65px;
+   height:2px;
+   background:#d8b893;
+   border-radius:20px;
+   margin-bottom:22px;
+}
+
+/* TEXTO */
+
+.category-overlay p{
+   color:
+   rgba(255,255,255,.82);
+   line-height:1.9;
+   font-size:.95rem;
+   max-width:280px;
 }
 
 /* HOVER */
 
-.card:hover{
+.category-card:hover{
    transform:
-   translateY(-14px);
+   translateY(-10px);
 }
 
-.card:hover img{
-   transform:scale(1.08);
+.category-card:hover img{
+   transform:scale(1.05);
 }
 
-.card:hover .overlay{
-   background:
-   linear-gradient(
-   to top,
-   rgba(0,0,0,.88) 0%,
-   rgba(0,0,0,.35) 45%,
-   rgba(0,0,0,.10) 100%
-   );
-}
+/* BORDE PREMIUM */
 
-.card:hover h3,
-.card:hover p,
-.card:hover .category-btn{
-   transform:translateY(0);
-   opacity:1;
-}
-
-/* BORDE */
-
-.card::after{
+.category-card::after{
    content:"";
    position:absolute;
    inset:0;
    border-radius:38px;
-   border:
-   1px solid rgba(255,255,255,.14);
+   border:1px solid rgba(255,255,255,.14);
    pointer-events:none;
 }
 
 /* BRILLO */
 
-.card::before{
+.category-card::before{
    content:"";
    position:absolute;
-   top:-120px;
-   right:-120px;
-   width:260px;
-   height:260px;
+   top:-100px;
+   right:-100px;
+   width:240px;
+   height:240px;
    background:
    radial-gradient(
-   rgba(255,255,255,.16),
-   transparent
-   );
+   rgba(255,255,255,.16),transparent);
    z-index:2;
 }
 
@@ -1147,12 +1153,21 @@
 
     @media(max-width:900px){
 
-          .categories{
-         padding:90px 6%;
+            .categories{
+         padding:100px 6%;
       }
    
-      .section-title h2{
-         font-size:3.5rem;
+      .categories-header{
+         margin-bottom:60px;
+      }
+   
+      .categories-header h2{
+         font-size:3.6rem;
+      }
+   
+      .categories-header p{
+         font-size:.95rem;
+         line-height:1.8;
       }
    
       .category-grid{
@@ -1160,32 +1175,25 @@
          gap:28px;
       }
    
-      .card{
-         height:500px;
+      .category-card{
+         height:420px;
          border-radius:30px;
       }
    
-      .overlay{
+      .category-overlay{
          padding:30px;
       }
    
-      .overlay h3{
+      .category-overlay h3{
          font-size:2.3rem;
-   
-         opacity:1;
-         transform:none;
       }
    
-      .overlay p{
-         opacity:1;
-         transform:none;
-   
-         font-size:.95rem;
+      .leaf-left{
+         width:180px;
       }
    
-      .category-btn{
-         opacity:1;
-         transform:none;
+      .leaf-right{
+         width:170px;
       }
 
        .map-layout{
