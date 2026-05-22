@@ -1029,7 +1029,7 @@
       .hero{
       background:
       linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-      url('imagenes/exterior-tienda.png');
+      url('imagenes/tienda-telefono.png');
 
       background-size:cover;
       background-position:center;
@@ -1052,4 +1052,3 @@
       }
 
     }
-
