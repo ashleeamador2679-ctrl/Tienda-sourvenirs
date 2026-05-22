@@ -946,7 +946,7 @@
    font-weight:500;
 }
 
-.section-title h2::after{
+.section-title span::after{
    content:"";
    display:block;
    width:90px;
