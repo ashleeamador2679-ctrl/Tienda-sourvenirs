@@ -335,7 +335,7 @@
 
 .feature-icon{
    position:absolute;
-   top:35px;
+   top:25px;
    left:50%;
    transform:translateX(-50%);
    width:95px;
