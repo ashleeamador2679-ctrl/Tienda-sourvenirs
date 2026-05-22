@@ -263,18 +263,21 @@
 }
 
 .features-header span{
-   color:var(--brown);
-   letter-spacing:4px;
-   font-size:.9rem;
+   color:#b6926d;
    text-transform:uppercase;
+   letter-spacing:4px;
+   font-size:.82rem;
    font-weight:500;
+   display:inline-block;
 }
 
-.mini-divider{
+.features-header span::after{
+   content:"";
+   display:block;
    width:90px;
    height:2px;
-   background:#c9b08f;
-   margin:18px auto 30px;
+   background:#c5a27b;
+   margin:18px auto 0;
    border-radius:20px;
 }
 
