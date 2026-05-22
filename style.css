@@ -417,6 +417,36 @@
 }
 
 /* =========================
+   BOTON PREMIUM
+========================= */
+.category-btn{
+   margin-top:30px;
+   padding:14px 34px;
+   border-radius:50px;
+   background:rgba(255,255,255,.08);
+   backdrop-filter:blur(14px);
+   -webkit-backdrop-filter:blur(14px);
+   border:1px solid rgba(216,184,147,.55);
+   color:#f5e7d7;
+   font-size:.82rem;
+   letter-spacing:2px;
+   text-transform:uppercase;
+   transition:.4s ease;
+   box-shadow:
+   0 10px 30px rgba(0,0,0,.18),
+   inset 0 0 0 1px rgba(255,255,255,.05);
+}
+
+/* HOVER */
+.category-btn:hover{
+   background:rgba(216,184,147,.14);
+   border:1px solid #d8b893;
+   color:white;
+   transform:translateY(-4px);
+   box-shadow:0 18px 35px rgba(0,0,0,.22);
+}
+
+/* =========================
    HOJAS DECORATIVAS
 ========================= */
 
