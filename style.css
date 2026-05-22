@@ -223,7 +223,7 @@
 
 .features{
    position:relative;
-   padding:120px 8%;
+   padding:220px 8% 120px;
    background:
    linear-gradient(
    to bottom,
@@ -258,7 +258,7 @@
 
 .features-header{
    text-align:center;
-   max-width:850px;
+   max-width:1400px;
    margin:auto auto 70px;
 }
 
@@ -280,11 +280,12 @@
 
 .features-header h2{
    font-family:'Cormorant Garamond', serif;
-   font-size:5rem;
+   font-size:4.5rem;
    color:var(--green);
    line-height:1;
    margin-bottom:25px;
    font-weight:600;
+   white-space:nowrap;
 }
 
 .features-header p{
@@ -309,7 +310,7 @@
    rgba(255,255,255,.65);
    backdrop-filter:blur(12px);
    border-radius:35px;
-   padding:90px 30px 45px;
+   padding:110px 30px 45px;
    position:relative;
    text-align:center;
    box-shadow:
@@ -329,7 +330,7 @@
 
 .feature-icon{
    position:absolute;
-   top:-35px;
+   top:-48px;
    left:50%;
    transform:translateX(-50%);
    width:95px;
