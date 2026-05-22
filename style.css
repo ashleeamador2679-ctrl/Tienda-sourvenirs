@@ -159,7 +159,7 @@
       height:100vh;
       background:
       linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), 
-      url('imagenes/exterior.png');
+      url('imagenes/tienda.png');
       background-size:cover;
       background-position:center;
       display:flex;
