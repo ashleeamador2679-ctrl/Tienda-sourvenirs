@@ -1271,6 +1271,82 @@
 
     @media(max-width:900px){
 
+
+             /* HERO */
+        .hero{
+          animation: heroMobile 2s ease;
+        }
+      
+        @keyframes heroMobile{
+      
+          from{
+            opacity: 0;
+            transform: scale(1.03);
+          }
+      
+          to{
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      
+        /* CONTENIDO */
+        .hero-content{
+          animation: heroContentMobile 1.4s ease forwards;
+        }
+      
+        @keyframes heroContentMobile{
+      
+          from{
+            opacity: 0;
+            transform: translateY(35px);
+          }
+      
+          to{
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      
+        /* TITULO */
+        .hero h1{
+          animation: mobileTitle 1.6s ease forwards;
+        }
+      
+        @keyframes mobileTitle{
+      
+          from{
+            opacity: 0;
+            transform: translateY(45px);
+            letter-spacing: 3px;
+          }
+      
+          to{
+            opacity: 1;
+            transform: translateY(0);
+            letter-spacing: 0;
+          }
+        }
+      
+        /* TEXTO */
+        .hero p,
+        .hero-sub{
+          animation: mobileText 2s ease forwards;
+        }
+      
+        @keyframes mobileText{
+      
+          from{
+            opacity: 0;
+            transform: translateY(20px);
+          }
+      
+          to{
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
             .categories{
          padding:100px 6%;
       }
