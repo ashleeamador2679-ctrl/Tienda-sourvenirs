@@ -1529,6 +1529,23 @@
     @media(max-width:900px){
 
 
+       .reviews{
+         padding:90px 6%;
+      }
+      
+      .reviews-header h2{
+         font-size:3rem;
+      }
+      
+      .reviews-grid{
+         grid-template-columns:1fr;
+      }
+      
+      .rating-stars{
+         font-size:1.6rem;
+      }
+
+
              /* HERO */
         .hero{
           animation: heroMobile 2s ease;
