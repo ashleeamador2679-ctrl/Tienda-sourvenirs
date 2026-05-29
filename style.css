@@ -1436,7 +1436,8 @@
    }
 
    .leaf{
-      display:none;
+        opacity:.05;
+        width:140px;
    }
 
    .features-header h2{
