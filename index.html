@@ -16,6 +16,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <!--iconos-->
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    function revealOnScroll(){reveals.forEach(item => {
+      const windowHeight = window.innerHeight;
+      const elementTop = item.getBoundingClientRect().top;
+      if(elementTop < windowHeight - 100){
+         item.classList.add('active');
+      }
+    });
+  }
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+</script>
 </head>
   
 <body>
@@ -165,7 +179,7 @@
 </section>
 
   <!-- HISTORIA -->
-<section class="story-section" id="nosotros">
+<section class="story-section reveal" id="nosotros">
   <div class="story-grid">
 
     <!-- IMAGENES -->
@@ -250,7 +264,7 @@
 
     <!-- CARD 1 -->
 
-    <div class="category-card"
+    <div class="category-card reveal"
     onclick="openCatalog('accesorios')">
 
       <img src="imagenes/accesorios.png">
@@ -274,7 +288,7 @@
 
     <!-- CARD 2 -->
 
-    <div class="category-card"
+    <div class="category-card reveal"
     onclick="openCatalog('decoracion')">
 
       <img src="imagenes/decoraciones.png">
@@ -297,7 +311,7 @@
 
     <!-- CARD 3 -->
 
-    <div class="category-card"
+    <div class="category-card reveal"
     onclick="openCatalog('artesanias')">
 
       <img src="imagenes/artesania.png">
@@ -484,7 +498,7 @@ window.onclick = function(e){
   
   <!-- ABOUT -->
 
-  <section class="about">
+  <section class="about reveal">
     <img src="imagenes/about-section.png" alt="Sourvenirs artesanales">
     <div class="about-text">
       <h2>
@@ -502,7 +516,7 @@ window.onclick = function(e){
   </section>
 
 <!--CARRUSEL DE IMAGENES-->
-  <section class="infinite-slider" id="colecciones">
+  <section class="infinite-slider reveal" id="colecciones">
     <div class="slider-track">
 
     <!-- IMAGENES -->
@@ -545,7 +559,7 @@ window.onclick = function(e){
 
    <div class="reviews-grid">
 
-      <div class="review-card">
+      <div class="review-card reveal">
 
          <div class="stars">★★★★★</div>
 
@@ -561,7 +575,7 @@ window.onclick = function(e){
 
       </div>
 
-      <div class="review-card">
+      <div class="review-card reveal">
 
          <div class="stars">★★★★★</div>
 
@@ -574,7 +588,7 @@ window.onclick = function(e){
          </h4>
       </div>
 
-      <div class="review-card">
+      <div class="review-card reveal">
 
          <div class="stars">★★★★★</div>
 
@@ -602,7 +616,7 @@ window.onclick = function(e){
   
 <!-- MAPA -->
 
-<section class="map-section">
+<section class="map-section reveal">
   <div class="section-title">
     <span>visítanos</span>
     <h2>Encuéntranos en Uvita</h2>
