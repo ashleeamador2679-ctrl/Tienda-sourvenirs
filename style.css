@@ -8,6 +8,22 @@
       scroll-behavior:smooth;
    }
 
+   /* FADE IN GENERAL */
+
+      body{
+        animation: pageFade 1.2s ease;
+      }
+      
+      @keyframes pageFade{
+        from{
+          opacity: 0;
+        }
+      
+        to{
+          opacity: 1;
+        }
+      }
+
    .whatsapp-btn{
       position:fixed;
       bottom:25px;
@@ -179,12 +195,39 @@
       align-items:center;
       padding:0 8%;
       position:relative;
+      animation: heroZoom 4s ease;
     }
+
+      @keyframes heroZoom{
+
+        from{
+          transform: scale(1.05);
+        }
+      
+        to{
+          transform: scale(1);
+        }
+      
+      }
 
     .hero-content{
       max-width:650px;
       color:white;
+       animation: heroReveal 1.6s ease;
     }
+      @keyframes heroReveal{
+      
+        0%{
+          opacity: 0;
+          transform: translateY(60px);
+        }
+      
+        100%{
+          opacity: 1;
+          transform: translateY(0);
+        }
+      
+      }
 
     .hero-sub{
       font-size:1.1rem;
@@ -199,7 +242,24 @@
       line-height:1;
       margin-bottom:25px;
       font-weight:500;
+      animation: titleReveal 1.8s ease;
     }
+
+   @keyframes titleReveal{
+
+     0%{
+       opacity: 0;
+       transform: translateY(80px);
+       letter-spacing: 8px;
+     }
+   
+     100%{
+       opacity: 1;
+       transform: translateY(0);
+       letter-spacing: 0;
+     }
+   
+   }
 
     .hero p{
       font-size:1.1rem;
@@ -207,6 +267,24 @@
       margin-bottom:35px;
       max-width:550px;
     }
+   .hero p,
+   .hero-sub{
+     animation: fadeText 2.2s ease;
+   }
+
+   @keyframes fadeText{
+
+     0%{
+       opacity: 0;
+       transform: translateY(20px);
+     }
+   
+     100%{
+       opacity: 1;
+       transform: translateY(0);
+     }
+   
+   }
 
    /* DIVISION WAVE*/
       .wave-divider{
