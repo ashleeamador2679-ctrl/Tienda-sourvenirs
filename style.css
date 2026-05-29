@@ -8,21 +8,19 @@
       scroll-behavior:smooth;
    }
 
-   /* FADE IN GENERAL */
+/* ANIMACION AL HACER SCROLL */
 
-      body{
-        animation: pageFade 1.2s ease;
-      }
-      
-      @keyframes pageFade{
-        from{
-          opacity: 0;
-        }
-      
-        to{
-          opacity: 1;
-        }
-      }
+   .reveal{
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+   }
+   
+   .reveal.active{
+      opacity: 1;
+      transform: translateY(0);
+   }
+
 
    .whatsapp-btn{
       position:fixed;
