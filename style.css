@@ -1464,6 +1464,7 @@
 
       .about{
         grid-template-columns:1fr;
+         url('imagenes/chorreadores-responsive.png')
       }
 
       .footer-grid{
